@@ -79,10 +79,28 @@
   transition: background 0.5s;
   z-index: 11;
 }
-.Chat-Bot{
-  margin-left: 50px;
-  padding-left: 70px;
+.Chat-Bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center alignment horizontally */
+  padding: 20px; /* Reduce padding for better responsiveness */
+  text-align: center; /* Align text content, if any */
 }
+
+@media (max-width: 768px) { /* For tablets and smaller screens */
+  .Chat-Bot {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) { /* For mobile screens */
+  .Chat-Bot {
+    padding: 5px; /* Further adjust for very small screens */
+    flex-direction: column; /* Stack items vertically if there are multiple elements */
+  }
+}
+
 .back-to-top i {
   color: var(--primary);
 }
@@ -218,4 +236,37 @@
 
 .testimonial-carousel .owl-dot.active {
   background: var(--primary);
+}
+
+
+.Chat-Bot {
+  display: inline-block;
+  margin-top: 10px; /* Space above the link */
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff; /* Adjust color if needed */
+  padding: 10px 20px; /* Padding for the link */
+  border-radius: 5px; /* Rounded corners for the button look */
+  background-color: rgba(0, 123, 255, 0.1); /* Background color */
+  transition: background-color 0.3s ease;
+}
+
+.Chat-Bot:hover {
+  background-color: rgba(0, 123, 255, 0.2); /* Hover effect */
+  text-decoration: none;
+}
+
+/* Center text within columns for mobile and larger screens */
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure the project container is properly responsive */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
